@@ -1,0 +1,344 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif; /* Основной шрифт */
+    line-height: 1.6;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+}
+
+.auth-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.auth-container button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.auth-container a {
+    color: #f4a261;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Блок соцсетей */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon a {
+    font-size: 24px;
+    transition: 0.3s;
+    color: currentColor; /* Наследует цвет от родительского элемента */
+}
+.social-login p {
+    color: #333; /* Или любой цвет, который нужен */
+}
+
+.social-icon a:hover {
+    color: #f4a261;
+}
+
+/* Шрифты для заголовков и основного текста */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abhaya Libre', serif; /* Шрифт для заголовков */
+    font-weight: 700; /* Увеличиваем жирность для заголовков */
+    color: #333;
+}
+
+h1 {
+    font-size: 3em; /* Размер для самого большого заголовка */
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+h6 {
+    font-size: 1.25em;
+}
+
+/* Основной текст */
+p, li, span {
+    font-family: 'Inter', sans-serif; /* Шрифт для основного текста */
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Дополнительное оформление заголовков */
+h1, h2, h3, h4 {
+    margin-bottom: 10px; /* Отступ снизу для заголовков */
+}
+
+p {
+    margin-bottom: 20px; /* Отступ снизу для параграфов */
+}
+
+/* Шапка */
+header {
+    background-color: white;
+    color: black;
+    padding: 20px 0; /* Увеличиваем отступы сверху и снизу */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: flex-start; /* Логотип слева */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для шапки */
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Отступ слева для логотипа */
+}
+
+.logo {
+    width: 150px; /* Уменьшаем логотип до 100px */
+    height: auto;  /* Высота будет подстраиваться пропорционально */
+}
+
+/* Навигация */
+header nav {
+    flex-grow: 1; /* Заставляет меню занимать оставшееся пространство */
+    display: flex;
+    justify-content: center; /* Центрируем элементы меню */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px; /* Отступы между пунктами меню */
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f8c15c; /* Цвет при наведении */
+}
+/* Основные стили футера */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Верхняя часть футера (логотип, ссылки, форма) */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Левая часть: Логотип и ссылки */
+.footer-left {
+    flex: 1;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Логотип слева */
+    align-items: center;
+    margin-bottom: 10px; /* Расстояние от логотипа до ссылок */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Установка максимальной ширины для логотипа */
+    height: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4a261;
+}
+
+/* Центральная часть: Подписка */
+.footer-center {
+    flex: 1;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Правая часть: Форма */
+.footer-right {
+    flex: 1;
+    text-align: right;
+    margin-left: 50px; /* Смещение формы правее */
+}
+
+.form-title {
+    color: white; /* Белый цвет */
+}
+
+.footer-form {
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-container button:hover {
+    color: #f4a261;
+}
+
+.privacy-text {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+
+/* Иконки соц. сетей (внизу) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f4a261;
+}
+
+.thank-you-text {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #ffffff;
+}

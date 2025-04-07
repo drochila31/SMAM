@@ -1,0 +1,485 @@
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+}
+
+.main-content {
+    flex: 1; /* Этот элемент будет растягиваться, занимая все пространство */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Шапка */
+header {
+    background-color: white;
+    color: black;
+    padding: 20px 0; /* Увеличиваем отступы сверху и снизу */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: flex-start; /* Логотип слева */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для шапки */
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Отступ слева для логотипа */
+}
+
+.logo {
+    width: 150px; /* Уменьшаем логотип до 150px */
+    height: auto;  /* Высота будет подстраиваться пропорционально */
+}
+
+/* Навигация */
+header nav {
+    flex-grow: 1; /* Заставляет меню занимать оставшееся пространство */
+    display: flex;
+    justify-content: center; /* Центрируем элементы меню */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px; /* Отступы между пунктами меню */
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f8c15c; /* Цвет при наведении */
+}
+
+/* Основной контейнер профиля */
+.profile-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Меню профиля */
+.profile-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-menu button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.profile-menu button:hover {
+    background: #f8c15c;
+}
+
+/* Секции профиля */
+.profile-section {
+    display: none;
+    text-align: left;
+}
+
+.profile-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.profile-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-section ul li {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Форма настроек */
+.profile-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section label {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.profile-section input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-section button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.profile-section button:hover {
+    background: #f8c15c;
+}
+
+/* Показываем первую секцию по умолчанию */
+.profile-section:first-child {
+    display: block;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; /* Это гарантирует, что футер будет "опущен" вниз */
+}
+
+/* Верхняя часть футера (логотип, ссылки, форма) */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Левая часть: Логотип и ссылки */
+.footer-left {
+    flex: 1;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Логотип слева */
+    align-items: center;
+    margin-bottom: 10px; /* Расстояние от логотипа до ссылок */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Установка максимальной ширины для логотипа */
+    height: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4a261;
+}
+
+/* Центральная часть: Подписка */
+.footer-center {
+    flex: 1;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Правая часть: Форма */
+.footer-right {
+    flex: 1;
+    text-align: right;
+    margin-left: 50px; /* Смещение формы правее */
+}
+
+.form-title {
+    color: white; /* Белый цвет */
+}
+
+.footer-form {
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-container button:hover {
+    color: #f4a261;
+}
+
+.privacy-text {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* Иконки соц. сетей (внизу) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f4a261;
+}
+
+
+.thank-you-text {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+/* Шрифты для заголовков и основного текста */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abhaya Libre', serif; /* Шрифт для заголовков */
+    font-weight: 700; /* Увеличиваем жирность для заголовков */
+    color: #333;
+}
+
+h1 {
+    font-size: 3em; /* Размер для самого большого заголовка */
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+h6 {
+    font-size: 1.25em;
+}
+
+/* Основной текст */
+p, li, span {
+    font-family: 'Inter', sans-serif; /* Шрифт для основного текста */
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Дополнительное оформление заголовков */
+h1, h2, h3, h4 {
+    margin-bottom: 10px; /* Отступ снизу для заголовков */
+}
+
+p {
+    margin-bottom: 20px; /* Отступ снизу для параграфов */
+}
+
+/* Стили для панели администратора */
+#admin {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.admin-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Стили для таблицы */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Отступ снизу таблицы */
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Стили для кнопок (ссылок) */
+.admin-link {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    text-decoration: none;
+    background-color: #000000;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.admin-link:hover {
+    background-color: #f8c15c;
+}
+
+.admin-link:active {
+    background-color: #f8c15c;
+}
+
+/* Отступы между таблицей и другими элементами */
+.profile-section {
+    margin-top: 30px;
+}
+
+/* Стили для админ-панели */
+.admin-panel {
+    display: none; /* Скроем панель по умолчанию */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-title {
+    color: #333;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+.admin-button {
+    background: #000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.admin-button:hover {
+    background: #f8c15c;
+}
+
+/* Стили для формы добавления пользователя */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-label {
+    margin-bottom: 8px;
+}
+
+.admin-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.admin-button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}

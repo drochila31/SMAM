@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif; /* Основной шрифт */
+    line-height: 1.6;
+}
+
+/* Основной контейнер */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+/* Шапка */
+header {
+    background-color: white;
+    color: black;
+    padding: 20px 0; /* Увеличиваем отступы сверху и снизу */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: flex-start; /* Логотип слева */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для шапки */
+}
+
+/* Логотип */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Отступ слева для логотипа */
+}
+
+.logo {
+    width: 150px; /* Уменьшаем логотип до 100px */
+    height: auto;  /* Высота будет подстраиваться пропорционально */
+}
+
+/* Навигация */
+header nav {
+    flex-grow: 1; /* Заставляет меню занимать оставшееся пространство */
+    display: flex;
+    justify-content: center; /* Центрируем элементы меню */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px; /* Отступы между пунктами меню */
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f8c15c; /* Цвет при наведении */
+}
+
+
+/* Основной контент страницы */
+main {
+    flex: 1;
+}
+
+/* Блоки с карточками, каталогами и новыми коллекциями */
+section {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Карточки товаров */
+.card {
+    background-color: #f4e7d4; /* Бежевый фон для карточек */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Секции с черным фоном */
+#testimonials, #contact-form, footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+/* Основные стили футера */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Верхняя часть футера (логотип, ссылки, форма) */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Левая часть: Логотип и ссылки */
+.footer-left {
+    flex: 1;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Логотип слева */
+    align-items: center;
+    margin-bottom: 10px; /* Расстояние от логотипа до ссылок */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Установка максимальной ширины для логотипа */
+    height: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4a261;
+}
+
+/* Центральная часть: Подписка */
+.footer-center {
+    flex: 1;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Правая часть: Форма */
+.footer-right {
+    flex: 1;
+    text-align: right;
+    margin-left: 50px; /* Смещение формы правее */
+}
+
+.form-title {
+    color: white; /* Белый цвет */
+}
+
+.footer-form {
+    max-width: 300px;
+    margin-left: auto;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-container button:hover {
+    color: #f4a261;
+}
+
+.privacy-text {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+
+/* Иконки соц. сетей (внизу) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f4a261;
+}
+
+.thank-you-text {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+/* Скрываем чат-бот по умолчанию */
+#chatbot {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease-in-out;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Появление чат-бота */
+#chatbot.show {
+    display: block;
+}
+
+/* Закрыть чат */
+#chatbot .close-chat {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#chatbot .close-chat:hover {
+    color: #f8c15c; /* Цвет при наведении */
+}
+
+/* Заголовок чата с аватаркой */
+#chatbot .chat-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f8c15c;
+    padding-bottom: 5px;
+}
+
+#chatbot .bot-avatar {
+    width: 40px; /* Размер аватарки */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#chatbot .chat-header p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Содержание чата */
+#chatbot .chat-content {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+    padding-right: 10px;
+}
+
+#chatbot .chat-content p {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для ввода сообщения */
+#chatbot input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#chatbot input[type="text"]:focus {
+    border-color: #f8c15c; /* Цвет при фокусе */
+    outline: none;
+}
+
+/* Кнопка отправки */
+#chatbot .chat-btn button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8c15c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chatbot .chat-btn button:hover {
+    background-color: #e49f42; /* Цвет при наведении */
+}
+
+
+/* Анимация для новых сообщений */
+#chatbot .chat-content p {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Для страницы с контентом, где будет выравнивание */
+.container {
+    max-width: 1200px; /* Максимальная ширина страницы */
+    margin: 0 auto;
+}
+
+/* Шрифты для заголовков и основного текста */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abhaya Libre', serif; /* Шрифт для заголовков */
+    font-weight: 700; /* Увеличиваем жирность для заголовков */
+    color: #000000;
+}
+
+h1 {
+    font-size: 3em; /* Размер для самого большого заголовка */
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+h6 {
+    font-size: 1.25em;
+}
+
+/* Основной текст */
+p, li, span {
+    font-family: 'Inter', sans-serif; /* Шрифт для основного текста */
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Дополнительное оформление заголовков */
+h1, h2, h3, h4 {
+    margin-bottom: 10px; /* Отступ снизу для заголовков */
+}
+
+p {
+    margin-bottom: 20px; /* Отступ снизу для параграфов */
+}
+#testimonials {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#testimonials h2 {
+    color: white;
+}
+
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card p {
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.testimonial-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-card h3 {
+    color: white;
+}
+
+.rating {
+    color: #f8c15c;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.testimonial-date {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.review-btn {
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.welcome-block {
+    text-align: center;
+    padding: 250px 0;
+    background-color: #ffffff;
+}
+
+.welcome-block h1 {
+    font-size: 298px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: -280px;
+}
+
+.welcome-block p {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 1000px; /* Максимальная ширина текста */
+    margin-left: auto; /* Центрирование по горизонтали */
+    margin-right: auto; /* Центрирование по горизонтали */
+}
+
+.collection-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Уменьшенный отступ между изображениями */
+    margin-top: 20px;
+}
+
+.image1 {
+    width: 55%; /* Увеличение первого изображения */
+}
+
+.image2 {
+    width: 90%; /* Увеличение второго изображения */
+}
+
+.image3 {
+    width: 90%; /* Увеличение третьего изображения */
+}
+
+.image-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.image-item p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.catalog-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Уменьшенный отступ между изображениями */
+    margin-top: 20px;
+}
+
+.image-item {
+    flex: 1;
+    text-align: center; /* Центрирование текста */
+}
+
+.image1 {
+    width: 55%; /* Увеличение первого изображения */
+}
+
+.image2 {
+    width: 90%; /* Увеличение второго изображения */
+}
+
+.image3 {
+    width: 90%; /* Увеличение третьего изображения */
+}
+
+.image-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.image-item p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.about-gallery {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gallery-images {
+    display: flex; /* Выстраиваем изображения в строку */
+    gap: 10px; /* Добавляем промежуток между изображениями */
+    justify-content: center; /* Выравнивание по центру */
+}
+
+.gallery-images img {
+    width: 100%; /* Изображения будут занимать 100% доступного пространства в блоке */
+    border-radius: 8px; /* Сглаженные углы */
+}
+
+.stores-container {
+    display: flex;
+    align-items: center; /* Выравниваем по центру */
+    justify-content: center;
+    gap: 60px; /* Ближе друг к другу */
+    margin-top: 20px;
+    padding: 0 90px; /* Отступ от краев страницы */
+}
+
+/* Карта слева */
+.map-container {
+    flex: 1; /* Растягиваем карту на 50% */
+    max-width: 60%;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Список филиалов справа */
+.store-list {
+    flex: 1; /* Растягиваем на 50% */
+    max-width: 400px;
+    padding: 20px;
+    background: #f4e7d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.store-list h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.store-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.store-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #444;
+}
+
+.store-list i {
+    margin-right: 10px;
+    color: #f8c15c;
+    font-size: 18px;
+}
+
+/* Для адаптива */
+@media (max-width: 768px) {
+    .stores-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container, .store-list {
+        max-width: 100%;
+        width: 100%;
+    }
+}
